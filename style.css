@@ -1,0 +1,627 @@
+:root {
+  --background-color: #fff;
+  --font-size: 1em;
+  --font-weight: 500px;
+  --flex-gap: 22px;
+  --flex-color1: #1dd2af;
+  --flex-gradient1: linear-gradient(to bottom, #1dd2af, #189c81);
+  --flex-color2: #fed26a;
+  --flex-gradient2: linear-gradient(to bottom, #fed26a, #fec238);
+  --flex-color3: #7ad0ff;
+  --flex-gradient3: linear-gradient(to bottom, #7ad0ff, #47beff);
+  --flex-color4: #ff8080;
+  --flex-gradient4: linear-gradient(to bottom, #ff8080, #fd5d5d);
+  --flex-gradient5: linear-gradient(to bottom, #6479d9, #3f509c);
+  --flex-gradient6: linear-gradient(to bottom, #005490, #005e9d);
+}
+
+/* Bmi Page Start */
+
+body {
+  padding: 20px 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: var(--font-size);
+  background-color: var(--background-color);
+  cursor: pointer;
+  z-index: 5;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+  scrollbar-width: 0px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body > * {
+  font-weight: 500;
+}
+
+p {
+  display: inline;
+  text-align: center;
+}
+#beforepage::before {
+  content: "";
+  font-size: 4.5em;
+  color: black;
+  z-index: -1;
+  position: absolute;
+  top: 30%;
+  left: 13%;
+  animation: text-blur-out 5s linear 1s both;
+  transition: 0.3s all;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--flex-gap);
+  width: 100%;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  gap: var(--flex-gap);
+}
+
+.row > * {
+  border: 1px transparent;
+  border-radius: 5px;
+  flex: 1;
+  background-color: var(--background-color);
+  padding: 20px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+}
+
+.row:nth-child(1) > * {
+  text-align: center;
+  font-size: 1.3em;
+  color: black;
+  font-weight: 600;
+  text-shadow: 1px 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.card1,
+.card2,
+.card3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+}
+
+.card5,
+.card7 {
+  text-align: left;
+  background: var(--flex-color1);
+  background: var(--flex-gradient1);
+}
+
+.card1,
+.card3 {
+  background: var(--flex-color2);
+  background: var(--flex-gradient2);
+}
+
+.card4,
+.card2 {
+  background: var(--flex-color3);
+  background: var(--flex-gradient3);
+}
+
+.card6,
+.card8 {
+  background: var(--flex-color4);
+  background: var(--flex-gradient4);
+}
+
+.card6 thead,
+.card8 thead {
+  background-color: #fd5d5d;
+}
+
+#statement {
+  display: inherit;
+  margin: 0px;
+  padding: 0px;
+}
+
+#statement:nth-child(1) {
+  font-size: 1.3em;
+}
+
+#statement:nth-child(2) {
+  margin-top: 10px;
+}
+
+.card4 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.card9 {
+  background: var(--flex-color2);
+  background: var(--flex-gradient2);
+}
+
+.card8 {
+  font-size: 1rem;
+}
+
+.card10 {
+  background: var(--flex-color3);
+  background: var(--flex-gradient3);
+  font-size: 15px;
+  animation-name: fadeIn;
+  animation: fadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+h3 {
+  color: var(--background-color);
+  font-weight: 600;
+  text-shadow: 1px 0 3px rgba(0, 0, 0, 0.35);
+  margin-bottom: 0.7em;
+}
+
+.ref>h5{
+  margin-top: 1em;
+}
+/* .ref> p>a:nth-child(1)
+{
+  color: black;
+} */
+.bmrsdetails {
+  margin-top: 2.5em;
+}
+
+table tr td {
+  color: black;
+  text-align: left;
+}
+
+table thead tr th {
+  color: black;
+  text-align: left;
+}
+
+.row:nth-child(6) {
+  justify-content: center;
+  align-items: center;
+}
+
+.row:nth-child(6) > * {
+  align-self: stretch;
+  max-width: 25em;
+}
+
+#tbl {
+  margin-bottom: 20px;
+}
+
+input,
+select {
+  border-radius: 5px;
+  border: none;
+  margin: 10px 0px;
+  outline: none;
+}
+#choice
+{
+  display: block;
+  margin: 10px 0px 0px;
+}
+#note
+{
+  display: inline-block;
+  text-align: left;
+  margin: 0px;
+}
+
+a {
+  color: #000000;
+}
+
+a:hover {
+  background-color: #7ad0ff;
+}
+/* Bmi Page End */
+
+/* Forms Page Start */
+#bdform {
+  font-size: 1.1em;
+  font-weight: bolder;
+  background-attachment: fixed;
+  background-color: #ffffff;
+  font-weight: 600;
+  opacity: 1;
+  background-image: radial-gradient(#0070ff 1px, #ffffff 1px);
+  background-size: 20px 20px;
+}
+
+#form {
+  max-width: 24em;
+  text-align: left;
+  border-radius: 5px;
+}
+
+#form .row > * {
+  padding: 10px 20px;
+  color: white;
+  background-image: linear-gradient(to bottom, #1e94e8, #0086e7);
+  font-size: 1.1em;
+  font-weight: 500;
+  text-shadow: none;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.form-control {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  min-width: 100%;
+  color: white !important;
+  background-color: rgb(0, 0, 0, 0.5) !important;
+  opacity: 1;
+  border: 1px solid white !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.form-control:focus,
+.form-control:active {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.5);
+  box-shadow: none;
+}
+
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:focus,
+.form-control:-webkit-autofill:hover {
+  border: none;
+  -webkit-text-fill-color: white;
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#Heading {
+  margin: 5px 0px 20px;
+  word-spacing: 2px;
+  font-size: 1.2em;
+  text-shadow: none;
+  line-height: 30px;
+  border-bottom: 1px solid white;
+}
+
+#frm_select {
+  background-color: transparent;
+  color: white;
+}
+
+#frm_select option {
+  color: black;
+}
+
+#button_form {
+  text-align: center;
+}
+
+#form_sub {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  padding: 7px 10px;
+  background: #1694ee;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: 10px 0px 15px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(41, 40, 40, 0.5);
+  transition: 0.2s ease-in;
+}
+
+#form_sub:hover {
+  border: 1px solid;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.2);
+  outline-offset: 15px;
+  outline-color: rgba(255, 255, 255, 0);
+  text-shadow: 1px 1px 2px #427388;
+}
+
+/* Forms Page End */
+
+/* Details Page Start */
+#Details_plan {
+  flex-wrap: nowrap;
+}
+
+#Details_plan p {
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+#Details_plan p:nth-last-child(1) {
+  margin: 0px;
+  padding: 0px;
+}
+#logo
+{
+  position: absolute;
+  margin-left: 20px;
+}
+i{
+  text-align: left;
+  display: inline;
+  font-size: 20px;
+  color: white;
+  text-shadow: none;
+}
+#back{
+  transition:1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#back:hover{
+  padding: 5px;
+  border-radius: 50%;
+}
+#Plan_Table p {
+  margin: 0px;
+}
+
+#Plan_Table thead {
+  background: #00a685f5;
+}
+
+#Plan_Table small {
+  color: white;
+  display: block;
+  font-size: 0.7em;
+}
+
+#Details_plan .row > * {
+  font-size: 1em;
+}
+
+.row:nth-child(1) .card h3 {
+  display: inline;
+  align-self: center;
+  padding: 5px 0px 10px;
+  margin: 0px;
+  font-weight: 500;
+}
+
+#Calorie_Table {
+  font-weight: 500;
+  color: white;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+}
+
+.row:nth-child(1) .card {
+  background: var(--flex-gradient5);
+  justify-content: center;
+  padding: 0px;
+  margin: 0px;
+  animation: fadeIn 1 cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.row:nth-child(2) .card {
+  background: var(--flex-gradient2);
+  animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+}
+
+.row:nth-child(2) .card:nth-child(2) {
+  background: var(--flex-gradient3);
+  animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.row:nth-child(3) .card {
+  background: var(--flex-gradient1);
+  animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.row:nth-child(3) .card:nth-child(2) {
+  background: var(--flex-gradient4);
+  font-size: 1.3em;
+  line-height: 25px;
+  animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+#error
+{
+  text-align: center;
+  background: var(--flex-gradient4);
+  min-height: 95vh;
+  width: 100%;
+  height: 100%;
+}
+#error  h1{
+  padding-top: 10%;
+  margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 1px 0 3px rgba(0, 0, 0, 0.35);
+  }
+
+
+/* Details Page End */
+
+/*Media Query for Display Less Then 768*/
+@media only screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .card10 > * {
+    padding: 0px 10px 10px;
+    font-size: 14px;
+  }
+
+  input {
+    max-width: 7.5rem;
+  }
+
+  select {
+    max-width: 14.5rem;
+  }
+
+  #statement {
+    text-align: left;
+  }
+
+  .card1,
+  .card2,
+  .card3 {
+    justify-content: left;
+    padding: 12px 20px 0px;
+  }
+
+  .card3 p {
+    text-align: left;
+  }
+
+  .row:nth-child(1) > * {
+    text-shadow: 1px 0 3px rgba(255, 255, 255, 0.5);
+  }
+
+  .row:nth-child(6) > * {
+    padding: 0px;
+    max-width: none;
+  }
+
+  /* Forms Page */
+  #form .row > * {
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.5);
+  }
+
+  #bdform {
+    padding: 20px 20px;
+  }
+
+  /* Forms Page End */
+
+  /* Pre Load*/
+  #beforepage::before {
+    font-size: 2.2em;
+    left: 5%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Pre Load*/
+}
+
+/*Pre Load Animation*/
+@keyframes text-blur-out {
+  0% {
+    content: "Fitness is not a destination";
+  }
+
+  25% {
+    color: white;
+  }
+
+  50%,
+  60% {
+    content: "It is a way of life";
+    opacity: 100%;
+    color: black;
+    filter: blur(0px);
+  }
+
+  100% {
+    filter: blur(12px) opacity(0%);
+  }
+}
+/*Pre Load Animation End*/
+
+
+/*Card Animations Start*/
+
+.card1,
+.card5,
+.card7 {
+  animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 5s both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.card2 {
+  animation: slide-in-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 6s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+}
+
+.card3,
+.card6,
+.card8 {
+  animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 5.5s both;
+}
+
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.card4,
+.card9,
+#img {
+  animation: hide-it 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 6.6s both;
+}
+
+@keyframes hide-it {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*Card Animations End*/
