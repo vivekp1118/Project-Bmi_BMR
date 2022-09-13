@@ -1,6 +1,7 @@
 <?php
 include 'connection.php';
 session_start();
+include 'config.php';
 $bmi = "";
 $weight1 = "";
 $weight2 = "";
@@ -9,12 +10,12 @@ $range = "";
 $loose = "";
 $redi = "";
 $cnt = 0;
-if (isset($_POST['first'])) {
-  $user = $_POST['uname'];
-  $age = $_POST['age'];
-  $weight = $_POST['weight'];
-  $height = $_POST['height'];
-  $gender = $_POST['gender'];
+if (isset($_SESSION['id'])) {
+  $user = $_SESSION['uname'];
+  $age = $_SESSION['age'];
+  $weight = $_SESSION['weight'];
+  $height = $_SESSION['height'];
+  $gender = $_SESSION['gender'];
   $heightm = $height / 100;
 
   $bmi = $weight / ($heightm ** 2);
@@ -258,7 +259,7 @@ if (isset($_POST['first'])) {
         <h4>
           <p> Are You Want to lose or gain Weight</p> 
           <p id="choice">Yes <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"> 
-          No <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck"></p>
+          No <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck" checked></p>
         </h4>
       </div>
     </div>
@@ -293,7 +294,7 @@ if (isset($_POST['first'])) {
                   </select>: <br>
                 </td>
                 <td id>
-                  <input type="number" step="any" name="aim"  value="<?php echo $weight3 ?>" placeholder="Weight in kgs">
+                  <input type="number" step="any" name="aim"  value="<?php echo $weight3 ?>" placeholder="Weight in kgs" required>
                 </td>
               </tr>
               <tr>
@@ -306,7 +307,7 @@ if (isset($_POST['first'])) {
                   </select> to achieve goal:
                 </td>
                 <td >
-                  <input type="number" step="any" name="periodNum" value="3">
+                  <input type="number" step="any" name="periodNum" value="3" required>
                 </td>
               </tr>
             </tbody>

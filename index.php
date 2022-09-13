@@ -1,8 +1,23 @@
 <?php
 include 'connection.php';
-session_start();
-$id = uniqid();
-$_SESSION['id'] = $id;
+if(isset($_POST['first']))
+{
+  session_start();
+  $id = uniqid();
+  $uname =  $_POST['uname'];
+  $age = $_POST['age'];
+  $weight = $_POST['weight'];
+  $height = $_POST['height'];
+  $gender =$_POST['gender'];
+
+  $_SESSION['id'] = $id;
+  $_SESSION['uname'] = $uname;
+  $_SESSION['age'] = $age;
+  $_SESSION['weight'] = $weight;
+  $_SESSION['height'] = $height;
+  $_SESSION['gender'] = $gender;
+  header("Location:Bmi.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +43,7 @@ $_SESSION['id'] = $id;
           <div id="Heading">
             <p>Tell us about Yourself</p>
           </div>
-          <form action="Bmi.php" method="post" id="form">
+          <form action="" method="post" id="form">
             <div class="form-group">
               <label for="usr">Name</label>
               <input type="text" class="form-control" id="usr" name="uname" placeholder="Full Name">

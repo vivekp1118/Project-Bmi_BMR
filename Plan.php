@@ -1,6 +1,8 @@
 <?php
 include 'connection.php';
 session_start();
+include 'config.php';
+
 if (isset($_POST['diet'])) {
     $activityLevel = $_POST['activityLevel'];
     $loseGain = $_POST['loseGain'];
@@ -69,7 +71,10 @@ if ($loseGain == 0) {
     $changeText = "increase";
 }
 if ($dailyCalChange > 1000) {
-  echo '<script>alert("Unsafe!!! Increase Time Period ")</script>';
+  echo '<script>
+  setTimeout(function(){  alert("Unsafe!!! Increase Time Period "); }, 500);
+ 
+  </script>';
 }
 
 ?>
@@ -89,7 +94,7 @@ if ($dailyCalChange > 1000) {
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src='main.js'></script>
   </head>
-  <body>
+  <body id="bd_plan">
     <div class="container" id="Details_plan">
       <div class="row">
         <div class="card">
@@ -184,7 +189,7 @@ if ($dailyCalChange > 1000) {
       <h1>Error !!!</h1>
         <h3>Your are trying to lose too much Weight in short period of  time</h3>
         <h3> Please Increase amount of Time Period And try Again. </h3>
-       <a  id="back" href="javascript:history.back()"><i class="fa-solid fa-left-long"></a></i>
+       <!-- <a  id="back" href="javascript:history.back()+location.reload()"><i class="fa-solid fa-left-long"></a></i> -->
 
       </div>
     </div>

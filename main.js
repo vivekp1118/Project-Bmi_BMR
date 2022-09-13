@@ -3,6 +3,9 @@ $(window).on('beforeunload', function() {
 	$(window).scrollTop(0);
 });
 
+if ( window.history.replaceState ) {
+	window.history.replaceState( null, null, window.location.href );
+}
 
 if (window.location.href.match("Bmi.php") != null) {
 	//Onload Event
