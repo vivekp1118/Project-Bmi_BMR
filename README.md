@@ -30,3 +30,11 @@
 ![](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 
 ## Images :
+### FORM:
+![](https://github.com/vivekp1118/Project-Bmi_BMR/blob/master/Images/Screenshot%202022-09-13%20165843.png)
+
+### Bmi Page :
+![](https://github.com/vivekp1118/Project-Bmi_BMR/blob/master/Images/Screenshot%202022-09-13%20170208.png)
+
+### Plan page :
+![](https://github.com/vivekp1118/Project-Bmi_BMR/blob/master/Images/Screenshot%202022-09-14%20221804.png)
